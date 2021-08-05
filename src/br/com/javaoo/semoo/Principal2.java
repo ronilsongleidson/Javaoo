@@ -1,34 +1,45 @@
 package br.com.javaoo.semoo;
 
 import br.com.javaoo.entities.Product;
-
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Principal2 {
+        public class Principal2 {
+            public static void main(String[] args) {
+                Locale.setDefault(Locale.US);
+                Scanner s = new Scanner(System.in);
+                Product p = new Product();
 
-    public static void main(String[] args){
-        Locale.setDefault(Locale.US);
-        Scanner scanner = new Scanner(System.in);
-        Product p = new Product();
-        p.setName(scanner.next());
-        p.setPrice(scanner.nextInt());
-        p.setQuantity(scanner.nextInt());
-        p.addProducts(scanner.nextInt());
 
-        System.out.println("Enter Product data");
-        System.out.println("Name : " + p.getName());
-        System.out.println("Price : " + p.getPrice());
-        System.out.println("quantity : " + p.getQuantity());
-        System.out.println();
-        p.addProducts(scanner.nextInt());
-        System.out.println("Product data: " + p.getName() + ","+ " $ " + p.getPrice()+ "," + p.getQuantity()+ " units" + "," + " Total: $ " + p.totalValueInStok());
-        System.out.println();
-        System.out.println("Enter the number of de products to be added in stok: ");
-        System.out.println("Update data: " + p.getName() + ","+ " $ " + p.getPrice()+ "," + p.getQuantity()+ " units" + "," + " Total: $ " + p.totalValueInStok());
-        System.out.println("Enter the number of de products to be remove in stok: ");
-        p.removeProducts(scanner.nextInt());
-        System.out.println("Update data: " + p.getName() + ","+ " $ " + p.getPrice()+ "," + p.getQuantity()+ " units" + "," + " Total: $ " + p.totalValueInStok());
+                System.out.println("Enter product data");
 
-    }
-}
+                System.out.print("name: ");
+                p.setName(s.next());
+                System.out.print("price: ");
+                p.setPrice(s.nextDouble());
+                System.out.print("quantity: ");
+                p.setQuantity(s.nextInt());
+
+
+                System.out.println("Product data: " + p.getName() + ", $ " + p.getPrice() + ", " +
+                        p.getQuantity() + " units, total: $ " + p.totalValueInStock() );
+
+
+                System.out.println("enter the number of products to be added in stock: ");
+                p.addProduct(s.nextInt());
+
+                System.out.println("Product data: " + p.getName() + ", $ " + p.getPrice() + ", " +
+                        p.getQuantity() + " units, total: $ " + p.totalValueInStock() );
+
+                System.out.print("enter the number of products to be removed from stock: ");
+                p.removeProduct(s.nextInt());
+
+                System.out.println("Product data: " + p.getName() + ", $ " + p.getPrice() + ", " +
+                        p.getQuantity() + " units, total: $ " + p.totalValueInStock() );
+
+            }
+
+
+        }
+
+
