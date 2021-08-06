@@ -36,6 +36,7 @@ public class Product {
 
     public void removeProduct(int quantity){
         if (this.quantity < quantity){ return; } this.quantity -= quantity; }
+
 }
 
 
