@@ -37,6 +37,29 @@ public class Product {
     public void removeProduct(int quantity){
         if (this.quantity < quantity){ return; } this.quantity -= quantity; }
 
+    public static class Retangulo {
+
+         private double largura;
+        private double altura;
+
+        public void setAltura(double altura) {
+            this.altura = altura;
+        }
+
+        public double getAltura() {
+            return altura;
+        }
+
+        public void setLargura(double largura) {
+            this.largura = largura;
+        }
+
+        public double getLargura() {
+            return largura;
+        }
+
+
+    }
 }
 
 

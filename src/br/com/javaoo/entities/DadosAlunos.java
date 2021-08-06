@@ -44,7 +44,7 @@ public class DadosAlunos {
     public void statusAluno() {
         if (somaNotas() < 60.0){
             System.out.println("Reprovado");
-            System.out.printf("Faltam: %.2f%n" + faltaPonto());
+            System.out.printf("Faltam: " + faltaPonto());
         }else {
             System.out.println("Aprovado");
         }
